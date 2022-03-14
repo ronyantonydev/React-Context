@@ -7,18 +7,20 @@ interface ContainerProps {
   children: ReactNode;
   isHeaderHide: boolean;
   isNavBarHide: boolean;
+  label: string;
 }
 
 const Container = ({
   isHeaderHide,
   isNavBarHide,
+  label,
   children
 }: ContainerProps) => {
   return (
     <StyledContainer>
       {!isNavBarHide && <Navbar />}
       <div className="container">
-        {!isHeaderHide && <Header />}
+        {!isHeaderHide && <Header headerLabel={label} />}
         <div className="content">{children}</div>
       </div>
     </StyledContainer>

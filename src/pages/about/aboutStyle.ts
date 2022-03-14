@@ -4,8 +4,8 @@ const StyledAbout = styled.div`
   display: flex;
   width: 100%;
   height: 100%;
-  background: purple;
-  color: #fff;
+  background: #fff;
+  color: darkblue;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -13,13 +13,25 @@ const StyledAbout = styled.div`
     margin-bottom: 2rem;
   }
   .button {
-    height: 5rem;
+    height: 3rem;
     width: 10rem;
-    background-color: orange;
+    border-radius: 3rem;
+    border: 2px solid darkblue;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    color: darkblue;
+    font-weight: bolder;
+    font-size: 0.7rem;
+  }
+  .button:hover {
+    background-color: darkblue;
+    color: #fff;
+  }
+  .button:active {
+    background-color: #fff;
+    color: darkblue;
   }
 `;
 

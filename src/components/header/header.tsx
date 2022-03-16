@@ -6,11 +6,7 @@ interface HeaderProps {
 const Header = ({ headerLabel }: HeaderProps) => {
   return (
     <StyledHeader>
-      {headerLabel ? (
-        <div className="title">{headerLabel}</div>
-      ) : (
-        <div className="title">Header</div>
-      )}
+      <div className="title">{headerLabel ? headerLabel : "Header"}</div>
     </StyledHeader>
   );
 };

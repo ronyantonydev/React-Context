@@ -14,8 +14,7 @@ const Home = () => {
   }: ContainerProviderType = useContext(ContainerContext);
 
   useEffect(() => {
-    changeNavBarStatus!(!navBarHidden);
-    changeHeaderStatus!(!headerHidden);
+    changeNavBarStatus(!navBarHidden);
     changeLabelStatus("Home Page");
   });
 

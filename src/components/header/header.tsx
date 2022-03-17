@@ -1,9 +1,12 @@
 import StyledHeader from "./headerStyle";
+interface HeaderProps {
+  headerLabel: string;
+}
 
-const Header = () => {
+const Header = ({ headerLabel }: HeaderProps) => {
   return (
     <StyledHeader>
-      <div className="title">Header</div>
+      <div className="title">{headerLabel ? headerLabel : "Header"}</div>
     </StyledHeader>
   );
 };

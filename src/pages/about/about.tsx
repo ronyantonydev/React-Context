@@ -8,16 +8,19 @@ const About = () => {
 
   const {
     changeHeaderStatus,
-    changeNavBarStatus
+    changeLabelStatus
   }: ContainerProviderType = useContext(ContainerContext);
 
   useEffect(() => {
-    changeNavBarStatus!(false);
-    changeHeaderStatus!(headerHidden);
+    changeHeaderStatus(headerHidden);
+    changeLabelStatus("About Page");
+    return () => {
+      changeHeaderStatus(!headerHidden);
+    };
   });
 
   const toogleNavBar = () => {
-    changeHeaderStatus!(!headerHidden);
+    changeHeaderStatus(!headerHidden);
     setHeaderHidden(!headerHidden);
   };
 

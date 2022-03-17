@@ -14,10 +14,10 @@ const Navbar = () => {
   return (
     <StyledNavbar>
       <div className="menu-item" onClick={() => menuItemclick("Menu Item 1")}>
-        Menu Item 1
+        Home Page
       </div>
       <div className="menu-item" onClick={() => menuItemclick("Menu Item 2")}>
-        Menu Item 2
+        About Page
       </div>
       <div className="menu-item">Menu Item 3</div>
       <div className="menu-item">Menu Item 4</div>
